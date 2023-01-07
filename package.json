@@ -3,21 +3,30 @@
   "displayName": "Codex Autocommit",
   "description": "Automatically commit and push dirty files on an interval.",
   "version": "0.0.1",
+  "publisher": "nephlm",
+  "repository": "https://github.com/nephlm/codex-autocommit.git",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.69.0"
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codex-autocommit.helloWorld"
+    "onCommand:codex-autocommit.helloWorld",
+    "onCommand:codex-autocommit.commitAndPush"
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "codex-autocommit.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "codex-autocommit.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "codex-autocommit.commitAndPush",
+        "title": "SCM Auto Commit And Push"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
