@@ -3,10 +3,10 @@
   "displayName": "Codex Autocommit",
   "description": "Automatically commit and push dirty files on an interval.",
   "version": "0.2.0",
-  "publisher": "nephlm",
+  "publisher": "ZenBrewismBooks",
   "repository": "https://github.com/nephlm/codex-autocommit.git",
   "engines": {
-    "vscode": "^1.69.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
