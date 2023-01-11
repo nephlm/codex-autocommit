@@ -36,6 +36,10 @@ Click the `install` button, and you're off to the races.
 
 ## Configuration
 
+By default, this extension doesn't do anything,
+you'll need to at least set `codex-autocommit.active` to `true`
+before it will start working.
+
 There are two settings for this extension.
 
 `codex-autocommit.active`  
