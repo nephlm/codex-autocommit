@@ -1,5 +1,4 @@
-
-# <img src=logo.png width=48 /> Codex Autocommit
+# <img src="https://raw.githubusercontent.com/nephlm/codex-autocommit/main/logo_128.png" width=48 /> Codex Autocommit
 
 VSCode extension to automatically stage and commit changes on an interval.
 
