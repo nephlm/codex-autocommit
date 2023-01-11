@@ -1,65 +1,56 @@
-# codex-autocommit README
 
-This is the README for your extension "codex-autocommit". After writing up a brief description, we recommend including the following sections.
+# Codex Autocommit
 
-## Features
+VSCode extension to automatically stage and commit changes on an interval.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Documentation
 
-For example if there is an image subfolder under your extension project workspace:
+This extension is not recommended for code.
+It was built to support using VSCode as a writing platform.
 
-\!\[feature X\]\(images/feature-x.png\)
+Every ten minutes (configurable) this extension will
+add all new and changed files from the git working tree to the index.
+Then commit the changeset to the repo, and if applicable,
+push to a remote repository.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Basically, every ten minutes it will push all changes to GitHub
+(or whatever remote git provider you use.)
 
-## Requirements
+You still need to initialize your git repo
+and configure your remotes as per normal.
+It just uses the git configuration in the workspace.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Limitations
 
-## Extension Settings
+* Only works with git.
+* Does not support multi-root workspaces.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Installation
 
-For example:
+Configure your git in your workspace
+by whichever method you normally use.
 
-This extension contributes the following settings:
+In VSCode, choose the extension activities
+and this extension can be found by searching for `codex`.
+Click the `install` button, and you're off to the races.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Configuration
 
-## Known Issues
+There are two settings for this extension.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+`codex-autocommit.active`  
 
-## Release Notes
+By default this is off,
+and should probably be activated on a per-workspace basis.
 
-Users appreciate release notes as you update your extension.
+`codex-autocommit.intervalMinutes`
 
-### 1.0.0
+How many minutes the extension will sleep between autocommits.
 
-Initial release of ...
+## License
 
-### 1.0.1
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Fixed issue #.
+## Authors
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[@nephlm](https://www.github.com/nephlm)
