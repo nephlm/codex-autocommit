@@ -2,7 +2,7 @@
   "name": "codex-autocommit",
   "displayName": "Codex Autocommit",
   "description": "Automatically commit and push dirty files on an interval.",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "publisher": "nephlm",
   "repository": "https://github.com/nephlm/codex-autocommit.git",
   "engines": {
@@ -12,22 +12,44 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codex-autocommit.helloWorld",
-    "onCommand:codex-autocommit.commitAndPush"
+    "onCommand:codex-autocommit.commitAndPush",
+    "onStartupFinished",
+    "onEditSession:file",
+    "onFileSystem:git",
+    "onFileSystem:git-show"
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "id": "codex-autocommit",
+      "title": "Codex AutoCommit",
+      "properties": {
+        "codex-autocommit.active": {
+          "type": "boolean",
+          "default": false,
+          "description": "Activate autocommits for this workspace",
+          "order": 0
+        },
+        "codex-autocommit.intervalMinutes": {
+          "type": "integer",
+          "default": 10,
+          "description": "Time between auto commits in minutes.",
+          "order": 1,
+          "minimum": 1,
+          "maximum": 10000
+        }
+      }
+    },
     "commands": [
-      {
-        "command": "codex-autocommit.helloWorld",
-        "title": "Hello World"
-      },
       {
         "command": "codex-autocommit.commitAndPush",
         "title": "SCM Auto Commit And Push"
       }
     ]
   },
+  "extensionDependencies": [
+    "vscode.git"
+  ],
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
