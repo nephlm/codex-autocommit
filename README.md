@@ -60,4 +60,4 @@ How many minutes the extension will sleep between autocommits.
 
 ## Logo
 
-[CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+by [Lorc](https://game-icons.net/1x1/lorc/letter-bomb.html) under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
