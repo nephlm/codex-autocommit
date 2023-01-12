@@ -30,7 +30,7 @@ Configure your git in your workspace
 by whichever method you normally use.
 
 In VSCode, choose the extension activities
-and this extension can be found by searching for `codex-autocommit`.
+and this extension can be found by searching for `codex`.
 Click the `install` button, and you're off to the races.
 
 ## Configuration
