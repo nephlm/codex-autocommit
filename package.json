@@ -2,7 +2,7 @@
   "name": "codex-autocommit",
   "displayName": "Codex Autocommit",
   "description": "Automatically commit and push dirty files on an interval.",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "publisher": "ZenBrewismBooks",
   "repository": "https://github.com/nephlm/codex-autocommit.git",
   "engines": {
