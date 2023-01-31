@@ -12,6 +12,22 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "snapshot",
+    "backup",
+    "git",
+    "VCS",
+    "SCM",
+    "commit",
+    "push",
+    "automation",
+    "writers",
+    "writing",
+    "books",
+    "book",
+    "author",
+    "novel"
+  ],
   "activationEvents": [
     "onCommand:codex-autocommit.commitAndPush",
     "onStartupFinished",
