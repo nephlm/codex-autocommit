@@ -79,15 +79,22 @@ const commitAndPush = async () => {
   const repository = api.repositories[0];
   await repository.status();
 
-  const modified = repository.state.workingTreeChanges.map((item) => {
+  var modified = repository.state.workingTreeChanges.map((item) => {
     return item.uri.path;
   });
-  var addPromise;
-  console.log(modified);
 
-  if (modified.length) {
+  const changed = modified.concat(
+    repository.repository.untrackedGroup.resourceStates.map((item) => {
+      return item.resourceUri.path;
+    })
+  );
+
+  var addPromise;
+  console.log(changed);
+
+  if (changed.length) {
     console.log("Staging Files");
-    addPromise = repository.add(modified);
+    addPromise = repository.add(changed);
     addPromise.then(() => check_commit(repository));
   } else {
     console.log("Working Tree is clean.");
