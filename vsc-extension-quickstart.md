@@ -1,5 +1,14 @@
 # Welcome to your VS Code Extension
 
+To run locally and debug, run and debug (from left tabs/sidebar) `extension.ts`.  That will open a new window running the extension.  
+
+In that new window adjust settings; Make sure the autocommit is active for the workspace and probably adjust the delay to 1 min.
+
+The new window must have a folder that is git repo open.
+
+Set breakpoints in the original window, and that should get you going. 
+
+
 ## What's in the folder
 
 * This folder contains all of the files necessary for your extension.

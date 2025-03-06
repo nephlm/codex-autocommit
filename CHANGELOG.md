@@ -2,6 +2,14 @@
 
 All notable changes to the "codex-autocommit" extension will be documented in this file.
 
+## [0.5.0]
+
+- Fix for recently introduced change in the git extension api.
+
+## [0.4.1]
+
+- Trigger on new untracked files, as well as already tracked files.
+
 ## [0.3.19]
 
 - Add links to git documentation to the README, and otherwise fill in some gaps.

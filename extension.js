@@ -84,8 +84,8 @@ const commitAndPush = async () => {
   });
 
   const changed = modified.concat(
-    repository.repository.untrackedGroup.resourceStates.map((item) => {
-      return item.resourceUri.path;
+    repository.state.untrackedChanges.map((item) => {
+      return item.uri.path;
     })
   );
 
